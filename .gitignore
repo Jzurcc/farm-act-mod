@@ -1,0 +1,15 @@
+# OS files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+.DS_Store
+
+# IDE / Editor files
+.vscode/
+.idea/
+
+# Archives & Temporary files
+*.zip
+*.tar.gz
+*.bak
+*.tmp
