@@ -1,0 +1,74 @@
+FA_TractorDash {
+    template dash_attack
+
+    target {
+        min_aoe 2
+        max_aoe 2
+    }
+
+    damage_instance {
+        effects {
+            VaporizeInanimate 1
+            Bruise 1
+        }
+    }
+}
+
+FA_Tractor_Explode {
+    template spell
+    chain_ability FA_Tractor_UnmountFarmerCat
+
+    graphics {
+        dont_orient true
+        particle Explosion
+        animation none
+    }
+
+    target {
+        aoe_mode circle
+        knockback_mode character_to_tile
+        aoe_excludes_self true
+        
+        target_mode none
+        min_range 0
+        max_range 0
+        min_aoe 0
+        max_aoe 2
+    }
+
+    damage_instance {
+        damage 5
+        knockback 1
+
+        elements [
+            Explosion
+        ]
+    }
+
+    self_damage {
+        damage 0
+        effects {
+            ForceUseAbility FA_Tractor_UnmountFarmerCat
+        }
+    }
+}
+
+FA_Tractor_UnmountFarmerCat {
+    template spawn
+    
+    graphics {
+        lob true
+    }
+
+    target {
+		exclude_self true
+		target_mode random_tile
+		min_range 2
+		max_range 2
+	}
+
+    spawn {
+		object FA_FarmerCat
+	}
+    
+}
