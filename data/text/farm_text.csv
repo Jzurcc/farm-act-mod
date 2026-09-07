@@ -1,3 +1,5 @@
 KEY,en,notes,sp,fr,de,it,pt-br,ru,ko,ja,zh
 ENEMY_FA_TRACTOR_NAME,Tractor
 ENEMY_FA_TRACTOR_DESC,"Charges toward units, destroying any obstacles on its way."
+ENEMY_FA_FARMERCAT_NAME,Farmer Cat
+ENEMY_FA_FARMERCAT_DESC,"Farmer"

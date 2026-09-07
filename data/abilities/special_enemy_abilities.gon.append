@@ -1,9 +1,11 @@
 FA_TractorDash {
-    template dash_attack
+    template trample_dash
 
     target {
         min_aoe 2
         max_aoe 2
+        max_range 5
+        aoe_considers_character_size true
     }
 
     damage_instance {
@@ -16,7 +18,7 @@ FA_TractorDash {
 
 FA_Tractor_Explode {
     template spell
-    chain_ability FA_Tractor_UnmountFarmerCat
+    // chain_ability FA_Tractor_UnmountFarmerCat
 
     graphics {
         dont_orient true
@@ -48,7 +50,7 @@ FA_Tractor_Explode {
     self_damage {
         damage 0
         effects {
-            ForceUseAbility FA_Tractor_UnmountFarmerCat
+            ImmediateUseAbility_Instant FA_Tractor_UnmountFarmerCat
         }
     }
 }

@@ -4,7 +4,7 @@ FA_Tractor {
         name "ENEMY_FA_TRACTOR_NAME"
         uifloaters_offset 2
         shadow_size 2
-        move_speed_sync_frames 40
+        move_speed_sync_frames 60
 
         tooltip "ENEMY_FA_TRACTOR_DESC"
     }
@@ -26,6 +26,7 @@ FA_Tractor {
         move_block everything_even_when_dead
         health 5
         shield 25
+        dispersed_bonus_turns 1
     }
 
     abilities {
@@ -35,6 +36,7 @@ FA_Tractor {
 
     passives {
         Trample 1
+        DeathRattle FA_Tractor_UnmountFarmerCat
         DeathRattle {
             ability FA_Tractor_Explode
             pop_corpse true
