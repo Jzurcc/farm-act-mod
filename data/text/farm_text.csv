@@ -24,3 +24,7 @@ ENEMY_FA_GOAT_NAME,Goat
 ENEMY_FA_GOAT_DESC,"Jumpy. Performs a chained dash attack."
 ENEMY_FA_WOOLYRAM_NAME,Wooly Ram
 ENEMY_FA_WOOLYRAM_DESC,"Performs a chained dash attack that can stun units."
+ENEMY_FA_WANDERER_NAME,Wanderer
+ENEMY_FA_WANDERER_DESC,"Its bite attack inflicts Poison. 
+Arms itself when damaged. 
+Gets enraged when backstabbed."

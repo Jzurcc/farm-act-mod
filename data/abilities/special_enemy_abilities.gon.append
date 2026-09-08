@@ -212,3 +212,86 @@ FA_WoolyRamChainDash {
         DashFury 2
     }
 }
+
+FA_WandererArm {
+    template self_buff
+
+    graphics {
+        animation revenge
+    }
+
+    damage_instance {
+        effects {
+            FormChange {
+                form "Armed"
+            }
+        }
+        ai_base_score 9999
+    }
+}
+
+FA_WandererAmbushStrike {
+    template melee_attack
+
+    graphics {
+        animation attack
+    }
+
+    target {
+        target_mode direction
+        min_aoe 1
+        max_aoe 1
+        knockback_mode none
+    }
+
+    damage_instance {
+        damage 5+bonus_melee_damage
+        type melee
+        effects {
+            Immobile 1
+            Poison 1
+        }
+    }
+
+    self_damage {
+        effects {
+            FormChange {
+                form "Default"
+            }
+        }
+    }
+}
+
+FA_WandererEnrage {
+    template self_buff
+
+    graphics {
+        animation insane
+    }
+
+    damage_instance {
+        effects {
+            FormChange {
+                form "Enraged"
+            }
+        }
+        ai_base_score 9999
+    }
+}
+
+FA_WandererCalmDown {
+    template self_buff
+
+    graphics {
+        animation calmdown
+    }
+
+    damage_instance {
+        effects {
+            FormChange {
+                form "Default"
+            }
+        }
+        ai_base_score 9999
+    }
+}

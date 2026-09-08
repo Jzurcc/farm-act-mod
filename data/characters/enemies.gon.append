@@ -1,3 +1,5 @@
+# Farm Chapter
+
 FA_Tractor {
     graphics {
         movieclip MechSuit
@@ -577,9 +579,87 @@ FA_Wanderer {
         move DefaultMove
         attack BasicBigMelee
 
-        passives {
-            AddStatusToBasicAttack {
-                Poison 1
+        spells [
+            FA_WandererArm
+            FA_WandererAmbushStrike
+            FA_WandererEnrage
+            FA_WandererCalmDown
+        ]
+    }
+
+    passives {
+        AddStatusToBasicAttack {
+            Poison 1
+        }
+        EliteTint [.75 .55 .35 .55]
+
+        FormChanger {
+            initial_form Default
+
+            Default {
+                passives {
+                    ImmediateAbilityReaction {
+                        ability FA_WandererArm
+                    }
+                    ImmediateAbilityReaction {
+                        ability FA_WandererEnrage
+                        backstabs_only true
+                    }
+                }
+
+                ai {
+                    brain PatternBrain
+                    decision_weights default
+                    move_weights stay_close_always_move
+                    pattern {
+                        do attack
+                    }
+                }
+            }
+
+            Armed {
+                passives {
+                    EliteTint [1 1 1 .4]
+                    MovementReaction {
+                        ability FA_WandererAmbushStrike
+                        forward_only true
+                        enemies_only true
+                    }
+                    ImmediateAbilityReaction {
+                        ability FA_WandererEnrage
+                        backstabs_only true
+                    }
+                }
+
+                ai {
+                    brain PatternBrain
+                    decision_weights default
+                    move_weights stay_close
+                    pattern {
+                        do attack
+                    }
+                }
+            }
+
+            Enraged {
+                animation_suffix "Insane"
+
+                passives {
+                    EliteTint [1 0 0 .25]
+                    StrengthUp 4
+                    SpeedUp 3
+                    AddMovement 2
+                }
+
+                ai {
+                    brain PatternBrain
+                    decision_weights careless
+                    move_weights stay_close_always_move
+                    pattern {
+                        do attack
+                        do FA_WandererCalmDown
+                    }
+                }
             }
         }
     }
