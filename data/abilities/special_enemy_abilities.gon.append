@@ -74,3 +74,22 @@ FA_Tractor_UnmountFarmerCat {
 	}
     
 }
+
+FA_ShepherdGoop {
+    variant_of CatGoop
+
+    graphics {
+        projectile Poisonball
+    }
+
+    damage_instance {
+        damage 2+bonus_ranged_damage
+        effects {
+            Poison 1
+        }
+
+        elements [
+            Poison
+        ]
+    }
+}

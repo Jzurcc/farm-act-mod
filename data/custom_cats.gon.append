@@ -1,3 +1,25 @@
 FA_FarmerCat {
     palette 38
+    class_anis Butcher
+}
+
+FA_Shepherd {
+    body 74
+    tail 126
+    leg1 186
+    leg2 186
+    arm1 186
+    arm2 186
+    texture 18
+    palette 65
+    head 1036
+    lefteye 1028
+    righteye 1028
+    lefteyebrow 1022
+    righteyebrow 1022
+    mouth 1042
+    leftear 1005
+    rightear 1005
+    voice male1
+    pitch .8
 }
