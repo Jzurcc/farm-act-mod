@@ -100,3 +100,124 @@ FA_FarmerCat {
         move_weights stay_close
     }
 }
+
+FA_Chick {
+    graphics {
+        movieclip BirdSmall
+        name "ENEMY_FA_CHICK_NAME"
+        piece_alt_frame 3
+        shadow_size .5
+        scale .8
+        spawnin_animation moveStart
+
+        tooltip "ENEMY_FA_CHICK_DESC"
+    }
+
+    stats {
+        strength 2
+    }
+
+    properties {
+        tag animal
+        hidden_tag [bird chickenfamily]
+        faction enemies
+        health 7
+        movement 3
+        initiative -999
+    }
+
+    sound {
+        alt_sounds [[SE_BirdSmall_DyingCall SE_BirdDying_Dove]]
+    }
+
+    passives {
+        CanMutateTo FA_Rooster
+        MutateAfterXTurns 2
+
+        CounterAttack attack
+        MoveAwayFromDamageSource {
+            move_ability BirdFly
+        }
+        Bird CookedChickenLeg
+
+        TrackAmountKilledByPlayer BonusBirdsKilled
+    }
+
+    abilities {
+        move DefaultMove
+        attack BasicMelee
+
+        spells [
+            BirdFly
+        ]
+    }
+
+    ai {
+        brain GenericBrain
+        decision_weights simple
+        move_weights bird
+    }
+}
+
+FA_Rooster {
+    graphics {
+        movieclip BirdLarge
+        name "ENEMY_FA_ROOSTER_NAME"
+        piece_alt_frame 17
+        shadow_size .5
+        scale .8
+
+        tooltip "ENEMY_FA_ROOSTER_DESC"
+    }
+
+    stats {
+        strength 2
+    }
+
+    properties {
+        tag animal
+        hidden_tag [bird]
+        faction enemies
+        health 14
+        movement 4
+        initiative -999
+    }
+
+    sound {
+        alt_sounds [[SE_BirdLarge_DyingCall SE_BirdDying_Chicken]]
+    }
+
+    abilities {
+        move DefaultMove
+        attack BasicMelee_2Hits
+
+        spells [
+            BirdFly
+        ]
+    }
+
+    passives {
+        HealthGain 7
+        CounterAttack attack
+        MoveAwayFromDamageSource {
+            move_ability BirdFly
+        }
+        Bird CookedChickenLeg
+
+        TrackAmountKilledByPlayer BonusBirdsKilled
+
+        SecurityBotProtect {
+            enemies_only true
+            ability attack
+            move MoveTwo
+            tag_restriction chickenfamily
+            not_on_kill true
+        }
+    }
+
+    ai {
+        brain GenericBrain
+        decision_weights simple
+        move_weights bird
+    }
+}

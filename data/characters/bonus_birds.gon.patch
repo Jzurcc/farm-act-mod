@@ -1,0 +1,5 @@
+Chicken.merge {
+    properties {
+        hidden_tag [bird chickenfamily]
+    }
+}
