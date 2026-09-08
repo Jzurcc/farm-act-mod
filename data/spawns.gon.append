@@ -1,0 +1,22 @@
+12500 {
+    editor {
+        category 9
+        image ["fightercat.png"]
+        paint false
+        name "Cow1"
+    }
+    
+    object FA_Cow1
+}
+
+12501 {
+    editor {
+        category 9
+        image ["fightercat.png"]
+        paint false
+        name "Cow2"
+    }
+    
+    object FA_Cow2
+}
+

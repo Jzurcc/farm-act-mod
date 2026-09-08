@@ -294,3 +294,150 @@ FA_Shepherd {
         }
     }
 }
+
+FA_OnionBomb {
+    graphics {
+        movieclip Thump
+        name "ENEMY_FA_ONIONBOMB_NAME"
+        uifloaters_offset 1.5
+        shadow_size 2
+        water_mask medmed
+        tooltip "ENEMY_FA_ONIONBOMB_DESC"
+    }
+
+    stats {
+        strength 1
+        dexterity 1
+        speed 0
+    }
+
+    properties {
+        health 24
+        movement 0
+        size 2x2
+        faction enemies
+    }
+
+    abilities {
+        move DoNothing
+        attack IsaacBasicAttack_2Hits
+
+        spells [
+            
+        ]
+    }
+
+    passives {
+        DeathRattle {
+            ability FA_OnionBomb_Explode
+            pop_corpse true
+            is_dying_animation true
+        }
+    }
+}
+
+FA_Cow1 {
+    graphics {
+        movieclip _CAT
+        name "ENEMY_FA_COW_NAME"
+        custom_cat_data FA_Cow
+        tooltip "ENEMY_FA_COW_DESC"
+        scale 1.3
+        shadow_size 1.3
+    }
+
+    stats {
+        strength 6
+        speed 2
+    }
+
+    properties {
+        faction enemies
+        health 18
+        movement 2
+    }
+
+    abilities {
+        move DefaultMove
+        attack BasicTankMelee
+
+        spells [
+            FA_Cowlick
+        ]
+    }
+
+    passives {
+        Buddy FA_Cow2
+        FormChangeWhenBuddyDies Enraged
+
+        FormChanger {
+            initial_form Default
+            Default {}
+            Enranged {
+                passives {
+                    SpeedUp 2
+                    AmplifyKnockback 3
+                    AddStatusToBasicAttack Bruise
+                }
+            }
+        }
+    }
+
+    ai {
+        brain PatternBrain
+        decision_weights default
+        move_weights stay_close
+
+        pattern {
+            do_priority [attack FA_Cowlick]
+            do_priority [FA_Cowlick attack]
+        }
+    }
+}
+
+FA_Cow2 {
+    variant_of FA_Cow1
+
+    passives {
+        Buddy FA_Cow1
+    }
+}
+
+FA_Fox {
+    graphics {
+        movieclip _CAT
+        name "ENEMY_FA_FOX_NAME"
+        custom_cat_data FA_Fox
+        tooltip "ENEMY_FA_FOX_DESC"
+    }
+
+    stats {
+        strength 6
+        speed 5
+    }
+
+    properties {
+        faction enemies
+        health 15
+        movement 5
+    }
+
+    abilities {
+        move Shadowstep
+        attack BasicMelee
+
+        spells [
+
+        ]
+    }
+
+    ai {
+        brain GenericBrain
+        decision_weights default
+        move_weights stay_close
+
+        pattern {
+            do attack
+        }
+    }
+}

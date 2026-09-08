@@ -23,3 +23,22 @@ FA_Shepherd {
     voice male1
     pitch .8
 }
+
+FA_Cow {
+    palette 40
+    body 6
+    head 160
+    tail 6
+    leg1 177
+    leg2 177
+    arm1 30
+    arm2 30
+    leftear 753
+    rightear 753
+    lefteye 31
+    righteye 31
+    lefteyebrow 41
+    righteyebrow 41
+    mouth 313
+    texture 174
+}

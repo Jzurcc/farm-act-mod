@@ -18,7 +18,6 @@ FA_TractorDash {
 
 FA_Tractor_Explode {
     template spell
-    // chain_ability FA_Tractor_UnmountFarmerCat
 
     graphics {
         dont_orient true
@@ -29,7 +28,6 @@ FA_Tractor_Explode {
     target {
         aoe_mode circle
         knockback_mode character_to_tile
-        aoe_excludes_self true
         
         target_mode none
         min_range 0
@@ -91,5 +89,57 @@ FA_ShepherdGoop {
         elements [
             Poison
         ]
+    }
+}
+
+// TODO: Make this a cant_cast 2-X so it's usable twice in one turn instead of multihit
+IsaacBasicAttack_2Hits {
+    variant_of IsaacBasicAttack
+    target {
+        multihit 2
+    }
+}
+
+FA_OnionBomb_Explode {
+    variant_of FA_Tractor_Explode
+
+    graphics {
+        particle PoisonPoof
+    }
+
+    damage_instance {
+        damage 7
+        effects {
+            Poison 2
+        }
+        elements [
+            Poison
+        ]
+    }
+}
+
+FA_Cowlick {
+    template melee_attack
+
+    graphics {
+        animation lickAttack
+    }
+
+    target {
+
+    }
+    
+    cost {
+        mana 0
+    }
+    
+    damage_instance {
+        heal 3
+
+        effects {
+            Cleanse 0
+        }
+
+        custom_additional_ai_weight must_target_buddy
     }
 }
