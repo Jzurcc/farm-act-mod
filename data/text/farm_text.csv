@@ -12,3 +12,10 @@ ENEMY_FA_SHEPHERD_NAME,Shepherd
 ENEMY_FA_SHEPHERD_DESC,"Blind. 
 Protects farm animals. 
 Shoots a Poison shot when damaged."
+ENEMY_FA_ONIONBOMB_NAME,Crying Onion
+ENEMY_FA_ONIONBOMB_DESC,"Might be better left alone..."
+ENEMY_FA_COW_NAME,Cow
+ENEMY_FA_COW_DESC,"Headbutts enemies and pushes them back.
+Will get angry if its friend dies."
+ENEMY_FA_FOX_NAME,Fox
+ENEMY_FA_FOX_DESC,"Swift thief. Eats birds."

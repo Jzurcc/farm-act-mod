@@ -124,16 +124,13 @@ FA_Cowlick {
     graphics {
         animation lickAttack
     }
-
-    target {
-
-    }
     
     cost {
         mana 0
     }
     
     damage_instance {
+        ai_base_score 10
         heal 3
 
         effects {
@@ -141,5 +138,44 @@ FA_Cowlick {
         }
 
         custom_additional_ai_weight must_target_buddy
+    }
+}
+
+FA_CowEnrage {
+    template self_buff
+
+    graphics {
+        animation angry
+    }
+
+    damage_instance {
+        effects {
+            FormChange {
+                form "Enraged"
+            }
+        }
+        ai_base_score 9999
+    }
+}
+
+FA_FoxExecuteBird {
+    variant_of wp_FA_FoxDart
+
+    meta {
+        name ""
+    }
+
+    graphics {
+        projectile knifeprojectile
+    }
+
+    target {
+        restrictions [must_have_tag]
+        target_requires_tag bird
+    }
+
+    damage_instance {
+        damage 999
+        ai_base_score 9999
     }
 }

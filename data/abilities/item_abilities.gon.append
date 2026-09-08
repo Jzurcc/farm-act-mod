@@ -1,0 +1,28 @@
+wp_FA_FoxDart {
+    template straightshot_attack
+
+    meta {
+        name "{itemname}"
+        animate_name false
+    }
+
+    graphics {
+        animation weaponthrowstraight
+        projectile source_weapon
+    }
+
+    cost {
+        mana 0
+        act_points 1
+    }
+
+    target {
+        min_range 1
+        max_range 4
+        restrictions none
+    }
+
+    damage_instance {
+        damage 5+bonus_melee_damage
+    }
+}

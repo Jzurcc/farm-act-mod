@@ -328,6 +328,7 @@ FA_OnionBomb {
     }
 
     passives {
+        Doomed 3
         DeathRattle {
             ability FA_OnionBomb_Explode
             pop_corpse true
@@ -363,21 +364,35 @@ FA_Cow1 {
 
         spells [
             FA_Cowlick
+            FA_CowEnrage
         ]
     }
 
     passives {
         Buddy FA_Cow2
-        FormChangeWhenBuddyDies Enraged
+        AbilityWhenBuddyDies FA_CowEnrage
 
         FormChanger {
             initial_form Default
             Default {}
-            Enranged {
+            Enraged {
                 passives {
+                    EliteTint [1 0 0 .25]
                     SpeedUp 2
                     AmplifyKnockback 3
-                    AddStatusToBasicAttack Bruise
+                    AddStatusToBasicAttack {
+                        Bruise 1
+                    }
+                }
+
+                ai {
+                    brain PatternBrain
+                    decision_weights default
+                    move_weights stay_close
+
+                    pattern {
+                        do attack
+                    }
                 }
             }
         }
@@ -385,12 +400,12 @@ FA_Cow1 {
 
     ai {
         brain PatternBrain
-        decision_weights default
-        move_weights stay_close
+        decision_weights default_no_revive
+        move_weights keep_distance_always_move
 
         pattern {
-            do_priority [attack FA_Cowlick]
             do_priority [FA_Cowlick attack]
+            do_priority [attack FA_Cowlick]
         }
     }
 }
@@ -403,8 +418,52 @@ FA_Cow2 {
     }
 }
 
+// TODO: Complete Fox behavior
 FA_Fox {
     graphics {
+        movieclip _CAT
+        name "ENEMY_FA_FOX_NAME"
+        custom_cat_data FA_Fox
+        tooltip "ENEMY_FA_FOX_DESC"
+    }
+
+    equipment {
+        weapon FA_FoxDart
+    }
+
+    stats {
+        strength 6
+        speed 5
+    }
+
+    properties {
+        faction enemies
+        health 15
+        movement 5
+    }
+
+    abilities {
+        move Shadowstep
+        attack DoNothing
+
+        spells [
+            FA_FoxExecuteBird
+        ]
+    }
+
+    ai {
+        brain PatternBrain
+        decision_weights default
+        move_weights stay_close_ish
+
+        pattern {
+            do_priority [FA_FoxExecuteBird weapon]
+        }
+    }
+}
+
+FA_Goat {
+        graphics {
         movieclip _CAT
         name "ENEMY_FA_FOX_NAME"
         custom_cat_data FA_Fox

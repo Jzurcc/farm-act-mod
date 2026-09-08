@@ -41,4 +41,6 @@ FA_Cow {
     righteyebrow 41
     mouth 313
     texture 174
+    voice male1
+    pitch .5
 }
