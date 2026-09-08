@@ -316,6 +316,7 @@ FA_OnionBomb {
         movement 0
         size 2x2
         faction enemies
+        kill_required false
     }
 
     abilities {
@@ -418,7 +419,7 @@ FA_Cow2 {
     }
 }
 
-// TODO: Complete Fox behavior
+// TODO: Fix Fox behavior not prioritizing birds
 FA_Fox {
     graphics {
         movieclip _CAT
@@ -437,17 +438,17 @@ FA_Fox {
     }
 
     properties {
-        faction enemies
+        faction solitary_enemies
         health 15
         movement 5
     }
 
     abilities {
         move Shadowstep
-        attack DoNothing
+        attack BasicRanged_Fox
 
         spells [
-            FA_FoxExecuteBird
+            
         ]
     }
 
@@ -457,7 +458,7 @@ FA_Fox {
         move_weights stay_close_ish
 
         pattern {
-            do_priority [FA_FoxExecuteBird weapon]
+            do_priority [attack]
         }
     }
 }

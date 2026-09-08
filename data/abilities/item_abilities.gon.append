@@ -24,5 +24,6 @@ wp_FA_FoxDart {
 
     damage_instance {
         damage 5+bonus_melee_damage
+        ai_base_score 10
     }
 }

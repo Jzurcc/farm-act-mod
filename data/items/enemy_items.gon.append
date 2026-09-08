@@ -3,7 +3,6 @@ FA_FoxDart {
     desc "ITEM_FA_FOXDART_DESC"
     kind weapon
     frame 151
-    durability 1 
     
     ability wp_FA_FoxDart
 }

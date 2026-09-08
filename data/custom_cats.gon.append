@@ -44,3 +44,7 @@ FA_Cow {
     voice male1
     pitch .5
 }
+
+FA_Fox {
+    palette 42
+}

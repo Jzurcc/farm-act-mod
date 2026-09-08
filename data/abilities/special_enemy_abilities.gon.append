@@ -158,24 +158,43 @@ FA_CowEnrage {
     }
 }
 
-FA_FoxExecuteBird {
-    variant_of wp_FA_FoxDart
+// TODO: since neutral birds can't be targeted, change to prioritize allied or enemy birds instead
+BasicRanged_Fox {
+    template straightshot_attack
 
     meta {
         name ""
+        animate_name false
     }
 
     graphics {
+        animation weaponthrowstraight
         projectile knifeprojectile
+    }
+
+    cost {
+        mana 0
+        act_points 1
     }
 
     target {
         restrictions [must_have_tag]
         target_requires_tag bird
+        min_aoe 1
+        max_aoe 4
     }
 
     damage_instance {
-        damage 999
-        ai_base_score 9999
+        damage 5+bonus_melee_damage
+        ai_base_score 10
+        effects {
+            Conditional_HasTag {
+                tag bird
+                DoDamage {
+                    damage 999
+                    type melee
+                }
+            }
+        }
     }
 }
