@@ -458,46 +458,129 @@ FA_Fox {
         move_weights stay_close_ish
 
         pattern {
-            do_priority [attack]
+            do_priority [attack weapon]
         }
     }
 }
 
 FA_Goat {
-        graphics {
+    graphics {
         movieclip _CAT
-        name "ENEMY_FA_FOX_NAME"
-        custom_cat_data FA_Fox
-        tooltip "ENEMY_FA_FOX_DESC"
+        name "ENEMY_FA_GOAT_NAME"
+        custom_cat_data FA_Goat
+        tooltip "ENEMY_FA_GOAT_DESC"
     }
 
     stats {
-        strength 6
-        speed 5
+        strength 4
+        speed 4
     }
 
     properties {
         faction enemies
-        health 15
-        movement 5
+        health 12
+        movement 4
     }
 
     abilities {
-        move Shadowstep
-        attack BasicMelee
+        move ToadJump_BasicMove
+        attack FA_GoatChainDash
 
         spells [
 
         ]
     }
 
+    passives {
+        BackflipWhenTargeted 1
+    }
+
     ai {
         brain GenericBrain
         decision_weights default
-        move_weights stay_close
+        move_weights stay_close_always_move
+    }
+}
 
-        pattern {
-            do attack
+FA_WoolyRam {
+    graphics {
+        movieclip _CAT
+        name "ENEMY_FA_WOOLYRAM_NAME"
+        custom_cat_data FA_WoolyRam
+        tooltip "ENEMY_FA_WOOLYRAM_DESC"
+    }
+
+    stats {
+        strength 3
+        speed 4
+    }
+
+    properties {
+        faction enemies
+        health 14
+        movement 4
+    }
+
+    abilities {
+        move DefaultMove
+        attack FA_WoolyRamChainDash
+
+        spells [
+
+        ]
+    }
+
+    passives {
+        Brace 2
+        AddStatusToBasicAttack {
+            Stun [1 .5]
+        }
+    }
+
+    ai {
+        brain GenericBrain
+        decision_weights default
+        move_weights stay_close_always_move
+    }
+}
+
+FA_Wanderer {
+    graphics {
+        movieclip SpiderQueen
+        name "ENEMY_FA_WANDERER_NAME"
+        scale 0.8
+        shadow_size 1.8
+        uifloaters_offset 2
+        water_mask medium
+        move_speed_sync_frames 7
+		tooltip "ENEMY_FA_WANDERER_DESC"
+    }
+
+    stats {
+        strength 4
+        speed 3
+    }
+
+    properties {
+        tag bug
+        faction enemies
+        movement 3
+        mana_regen 999
+        mana 100
+        health 25
+
+        size 2x2
+        move_block everything_even_when_dead
+    }
+
+    abilities {
+        move DefaultMove
+        attack BasicBigMelee
+
+        passives {
+            AddStatusToBasicAttack {
+                Poison 1
+            }
         }
     }
 }

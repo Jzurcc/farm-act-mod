@@ -198,3 +198,17 @@ BasicRanged_Fox {
         }
     }
 }
+
+FA_GoatChainDash {
+    variant_of ChainDash
+    temporary_effects {
+        DashFury 3
+    }
+}
+
+FA_WoolyRamChainDash {
+    variant_of ChainDash
+    temporary_effects {
+        DashFury 2
+    }
+}

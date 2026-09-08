@@ -20,3 +20,7 @@ Will get angry if its friend dies."
 ENEMY_FA_FOX_NAME,Fox
 ENEMY_FA_FOX_DESC,"Swift thief. Eats birds."
 ITEM_FA_FOXDART_NAME,Fox Dart
+ENEMY_FA_GOAT_NAME,Goat
+ENEMY_FA_GOAT_DESC,"Jumpy. Performs a chained dash attack."
+ENEMY_FA_WOOLYRAM_NAME,Wooly Ram
+ENEMY_FA_WOOLYRAM_DESC,"Performs a chained dash attack that can stun units."
