@@ -28,3 +28,6 @@ ENEMY_FA_WANDERER_NAME,Wanderer
 ENEMY_FA_WANDERER_DESC,"Its bite attack inflicts Poison. 
 Arms itself when damaged. 
 Gets enraged when backstabbed."
+ENEMY_FA_PIG_NAME,Pig
+ENEMY_FA_PIG_DESC,"Reflects projectiles and attackers.
+His bite has lifesteal."

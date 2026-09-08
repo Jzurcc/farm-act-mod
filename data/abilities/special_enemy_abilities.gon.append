@@ -294,4 +294,21 @@ FA_WandererCalmDown {
         }
         ai_base_score 9999
     }
-}
+}
+
+FA_PigBite {
+    template melee_attack
+
+    graphics {
+        animation biteattack
+    }
+
+    damage_instance {
+        damage 5+bonus_melee_damage
+        type melee
+
+        effects {
+            Leech 1
+        }
+    }
+}

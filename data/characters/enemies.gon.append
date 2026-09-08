@@ -657,10 +657,59 @@ FA_Wanderer {
                     move_weights stay_close_always_move
                     pattern {
                         do attack
-                        do FA_WandererCalmDown
+                        do_all [attack FA_WandererCalmDown]
                     }
                 }
             }
         }
+    }
+}
+
+FA_Pig {
+    graphics {
+        movieclip _CAT
+        name "ENEMY_FA_PIG_NAME"
+        custom_cat_data Pig
+        tooltip "ENEMY_FA_PIG_DESC"
+    }
+
+    stats {
+        strength 4
+        speed 3
+    }
+
+    properties {
+        faction enemies
+        health 18
+        movement 3
+    }
+
+    abilities {
+        move DefaultMove
+        attack FA_PigBite
+
+        spells [
+
+        ]
+    }
+
+    passives {
+        ReflectProjectiles 50%
+
+        MeleeRevengeDamage {
+            type status
+            damage 0
+            knockback 2
+        }
+
+        MoveAwayFromDamageSource {
+            move_ability MoveThree
+        }
+    }
+
+    ai {
+        brain GenericBrain
+        decision_weights default
+        move_weights stay_close_always_move
     }
 }
