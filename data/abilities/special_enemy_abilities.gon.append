@@ -4,7 +4,7 @@ FA_TractorDash {
     target {
         min_aoe 2
         max_aoe 2
-        max_range 5
+        max_range 3
         aoe_considers_character_size true
     }
 

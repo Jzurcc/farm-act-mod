@@ -4,7 +4,7 @@ FA_Tractor {
         name "ENEMY_FA_TRACTOR_NAME"
         uifloaters_offset 2
         shadow_size 2
-        move_speed_sync_frames 60
+        move_speed_sync_frames 27
 
         tooltip "ENEMY_FA_TRACTOR_DESC"
     }
@@ -27,7 +27,6 @@ FA_Tractor {
         health 5
         movement 4
         shield 25
-        dispersed_bonus_turns 1
     }
 
     abilities {
