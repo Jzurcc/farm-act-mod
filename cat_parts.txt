@@ -10,5 +10,9 @@ demo.headGoatC = head demo.catPartsTest 2
 demo.eyeGoatC = eye demo.catPartsTest 2
 demo.earGoatC = ear demo.catPartsTest 2
 demo.tailGoatC = tail demo.catPartsTest 2
+demo.mouthGoatC = mouth demo.catPartsTest 2
 
 demo.textureShepherd = texture demo.catPartsTest 2
+
+demo.eyeFarmer = eye demo.catPartsTest 3
+demo.mouthFarmer = mouth demo.catPartsTest 4

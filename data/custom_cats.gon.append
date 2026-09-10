@@ -1,5 +1,20 @@
 FA_FarmerCat {
-    palette 38
+    body 34
+    head 29
+    tail 163
+    leg1 183
+    leg2 183
+    arm1 200
+    arm2 200
+    leftear 52
+    rightear 52
+    lefteye @demo.eyeFarmer
+    righteye @demo.eyeFarmer
+    lefteyebrow 701
+    righteyebrow 701
+    mouth @demo.mouthFarmer 
+    texture 147
+    palette 25
     class_anis Butcher
 }
 
@@ -71,8 +86,8 @@ FA_Bull {
 }
 
 FA_Goat {
-    texture @demo.textureShepherd
-    palette 45
+    texture 14
+    palette 27
     head @demo.headGoat
     lefteye @demo.eyeGoat
     righteye @demo.eyeGoat
@@ -98,7 +113,7 @@ FA_Goat_Champion {
     righteye @demo.eyeGoatC
     leftear @demo.earGoatC
     rightear @demo.earGoatC
-    mouth @demo.mouthGoat
+    mouth @demo.mouthGoatC
     lefteyebrow 42
     righteyebrow 42
     body @demo.bodyGoat
