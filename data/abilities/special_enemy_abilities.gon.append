@@ -312,3 +312,37 @@ FA_PigBite {
         }
     }
 }
+
+FA_BullToss {
+    template melee_attack
+
+    graphics {
+        animation headbuttdash
+    }
+
+    damage_instance {
+        damage 0+bonus_melee_damage
+        type melee
+
+        effects {
+            KnockUpAndAway {
+                distance 3
+                stacks 3
+            }
+        }
+    }
+}
+
+FA_BullCharge {
+    variant_of BasicTankMelee
+
+    target {
+        max_range 3
+        aoe_restrictions must_have_line_of_sight_unpurgable
+    }
+
+    damage_instance {
+        damage 2+bonus_melee_damage
+        knockback 2
+    }
+}

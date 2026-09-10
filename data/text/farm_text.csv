@@ -31,3 +31,6 @@ Gets enraged when backstabbed."
 ENEMY_FA_PIG_NAME,Pig
 ENEMY_FA_PIG_DESC,"Reflects projectiles and attackers.
 His bite has lifesteal."
+ENEMY_FA_BULL_NAME,Bull
+ENEMY_FA_BULL_DESC,"Tosses units away with its horns.
+Gains damage and a charge attack when threatened."

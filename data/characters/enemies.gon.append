@@ -713,3 +713,78 @@ FA_Pig {
         move_weights stay_close_always_move
     }
 }
+
+FA_Bull {
+    graphics {
+        movieclip _CAT
+        name "ENEMY_FA_BULL_NAME"
+        custom_cat_data FA_Bull
+        tooltip "ENEMY_FA_BULL_DESC"
+        scale 1.3
+        shadow_size 1.3
+    }
+
+    stats {
+        strength 2
+        speed 2
+    }
+
+    properties {
+        faction solitary_enemies
+        health 18
+        shield 5
+        movement 2
+    }
+
+    abilities {
+        move DefaultMove
+        attack FA_BullToss
+
+        spells [
+            FA_BullCharge
+        ]
+    }
+
+    passives {
+        FormChanger {
+            initial_form Default
+
+            Default {
+                ai {
+                    brain PatternBrain
+                    decision_weights default
+                    move_weights stay_close_always_move
+
+                    pattern {
+                        do attack
+                    }
+                }
+            }
+
+            Threatened {
+                passives {
+                    StrengthUp 2
+                    PermanentMadness 1
+                    EliteTint [1 .2 .2 .25]
+                }
+
+                ai {
+                    brain PatternBrain
+                    decision_weights default
+                    move_weights stay_close_always_move
+
+                    pattern {
+                        do_priority [FA_BullCharge attack]
+                    }
+                }
+            }
+        }
+
+        FormChangeHealthThreshold {
+            threshold 13
+            count_shield true
+            form_below Threatened
+            form_above Default
+        }
+    }
+}
