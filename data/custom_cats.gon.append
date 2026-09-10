@@ -69,3 +69,23 @@ FA_Bull {
     voice male1
     pitch .4
 }
+
+FA_Goat {
+    palette 45
+    head @demo.headGoat
+    lefteye @demo.eyeGoat
+    righteye @demo.eyeGoat
+    leftear @demo.earGoat
+    rightear @demo.earGoat
+    mouth @demo.mouthGoat
+    lefteyebrow 42
+    righteyebrow 42
+    body @demo.bodyGoat
+    leg1 @demo.legGoat
+    leg2 @demo.legGoat
+    arm1 @demo.legGoat
+    arm2 @demo.legGoat
+    tail @demo.tailGoat
+    voice male1
+    pitch 1.2
+}

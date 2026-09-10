@@ -3,5 +3,8 @@
 	"description": "A new act mod.",
 	"author": "Zyrus & Alli",
 	"version": "v0.0.1",
-	"url": ""
+	"url": "",
+	"requirements": [
+		"MewCatPartFramework>=1.0.0"
+	]
 }

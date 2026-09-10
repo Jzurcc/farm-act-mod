@@ -1,0 +1,7 @@
+demo.headGoat = head demo.catPartsTest 1
+demo.eyeGoat = eye demo.catPartsTest 1
+demo.earGoat = ear demo.catPartsTest 1 
+demo.mouthGoat = mouth demo.catPartsTest 1
+demo.bodyGoat = body demo.catPartsTest 1
+demo.legGoat = leg demo.catPartsTest 1
+demo.tailGoat = tail demo.catPartsTest 1
