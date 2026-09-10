@@ -71,6 +71,7 @@ FA_Bull {
 }
 
 FA_Goat {
+    texture @demo.textureShepherd
     palette 45
     head @demo.headGoat
     lefteye @demo.eyeGoat
@@ -88,4 +89,25 @@ FA_Goat {
     tail @demo.tailGoat
     voice male1
     pitch 1.2
+}
+
+FA_Goat_Champion {
+    palette 40
+    head @demo.headGoatC
+    lefteye @demo.eyeGoatC
+    righteye @demo.eyeGoatC
+    leftear @demo.earGoatC
+    rightear @demo.earGoatC
+    mouth @demo.mouthGoat
+    lefteyebrow 42
+    righteyebrow 42
+    body @demo.bodyGoat
+    leg1 @demo.legGoat
+    leg2 @demo.legGoat
+    arm1 @demo.legGoat
+    arm2 @demo.legGoat
+    tail @demo.tailGoatC
+    voice male1
+    pitch 1.2
+    texture 14
 }
