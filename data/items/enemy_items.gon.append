@@ -6,3 +6,51 @@ FA_FoxDart {
     
     ability wp_FA_FoxDart
 }
+
+FA_Head {
+    name "Weird Hat"
+    desc "Yeehaw"
+    rarity uncommon
+    kind head
+    frame @demo.headGear
+    
+    passives {
+        RevengeDamage {
+            damage 1
+
+            effects {
+                Stun [1, .1]
+                VisualFX Bolt
+            }
+            
+            elements [
+                Electric
+            ]
+        }
+        Metal 1
+    }
+}
+
+FA_Head2 {
+    name "Weird Hat"
+    desc "Yeehaw"
+    rarity uncommon
+    kind head
+    frame @demo.headGear2
+    
+    passives {
+        RevengeDamage {
+            damage 1
+
+            effects {
+                Stun [1, .1]
+                VisualFX Bolt
+            }
+            
+            elements [
+                Electric
+            ]
+        }
+        Metal 1
+    }
+}
