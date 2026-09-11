@@ -16,3 +16,7 @@ demo.textureShepherd = texture demo.catPartsTest 2
 
 demo.eyeFarmer = eye demo.catPartsTest 3
 demo.mouthFarmer = mouth demo.catPartsTest 4
+
+demo.headGear = headItem demo.itemsTest 1
+
+demo.headGear2 = headItem demo.itemsTest 2

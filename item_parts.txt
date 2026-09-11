@@ -1,3 +1,0 @@
-demo.headGear = head demo.itemsTest 1
-
-demo.headGear2 = head demo.itemsTest 2
