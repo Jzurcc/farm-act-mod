@@ -680,7 +680,8 @@ FA_Pig {
 
     properties {
         faction enemies
-        health 18
+        health 30
+        initial_health 18
         movement 3
     }
 
