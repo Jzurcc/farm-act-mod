@@ -12,7 +12,7 @@ FA_Head {
     desc "Yeehaw"
     rarity uncommon
     kind head
-    frame @demo.headGear
+    frame @farm.headGear
     
     passives {
         RevengeDamage {
@@ -36,7 +36,7 @@ FA_Head2 {
     desc "Yeehaw"
     rarity uncommon
     kind head
-    frame @demo.headGear2
+    frame @farm.headGear2
     
     passives {
         RevengeDamage {
@@ -53,4 +53,18 @@ FA_Head2 {
         }
         Metal 1
     }
+}
+
+FA_Weapon {
+	name "A weapon"
+    desc "ITEM_PERSUASIONDEVICE_DESC"
+    kind weapon
+    frame @farm.weaponWeapon
+    quest_item true
+    rarity sidequest
+    quest_reward_item PersuasionDevice_Fixed
+
+    ability wp_PersuasionDevice
+
+    spd -2
 }

@@ -440,7 +440,7 @@ FA_Fox {
     }
 
     properties {
-        faction solitary_enemies
+        faction enemies
         health 15
         movement 5
     }

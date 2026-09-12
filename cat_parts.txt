@@ -1,22 +1,43 @@
-demo.headGoat = head demo.catPartsTest 1
-demo.eyeGoat = eye demo.catPartsTest 1
-demo.earGoat = ear demo.catPartsTest 1 
-demo.mouthGoat = mouth demo.catPartsTest 1
-demo.bodyGoat = body demo.catPartsTest 1
-demo.legGoat = leg demo.catPartsTest 1
-demo.tailGoat = tail demo.catPartsTest 1
+farm.headGoat = head farm.catParts 1
+farm.eyeGoat = eye farm.catParts 1
+farm.earGoat = ear farm.catParts 1 
+farm.mouthGoat = mouth farm.catParts 1
+farm.bodyGoat = body farm.catParts 1
+farm.legGoat = leg farm.catParts 1
+farm.tailGoat = tail farm.catParts 1
 
-demo.headGoatC = head demo.catPartsTest 2
-demo.eyeGoatC = eye demo.catPartsTest 2
-demo.earGoatC = ear demo.catPartsTest 2
-demo.tailGoatC = tail demo.catPartsTest 2
-demo.mouthGoatC = mouth demo.catPartsTest 2
+farm.headGoatC = head farm.catParts 2
+farm.eyeGoatC = eye farm.catParts 2
+farm.earGoatC = ear farm.catParts 2
+farm.tailGoatC = tail farm.catParts 2
+farm.mouthGoatC = mouth farm.catParts 2
 
-demo.textureShepherd = texture demo.catPartsTest 2
+farm.textureShepherd = texture farm.catParts 2
+farm.bodyShepherd = body farm.catParts 2
+farm.headShepherd = head farm.catParts 6
 
-demo.eyeFarmer = eye demo.catPartsTest 3
-demo.mouthFarmer = mouth demo.catPartsTest 4
+farm.eyeFarmer = eye farm.catParts 3
+farm.mouthFarmer = mouth farm.catParts 3
 
-demo.headGear = headItem demo.itemsTest 1
+farm.headFarmerC = head farm.catParts 3
+farm.mouthFarmerC = mouth farm.catParts 4
 
-demo.headGear2 = headItem demo.itemsTest 2
+farm.headGear = headItem farm.items 1
+
+farm.headGear2 = headItem farm.items 2
+
+farm.weaponWeapon = weapon farm.items 1
+
+farm.headFox = head farm.catParts 4
+farm.eyeFox = eye farm.catParts 4
+farm.lefteyebrowFox = eyebrow farm.catParts 2
+farm.righteyebrowFox = eyebrow farm.catParts 3
+farm.earFox = ear farm.catParts 3
+farm.mouthFox = mouth farm.catParts 5
+farm.legFox = leg farm.catParts 3
+farm.armFox = leg farm.catParts 2
+farm.tailFox = tail farm.catParts 3
+
+farm.eyeFoxC = eye farm.catParts 5
+farm.headFoxC = head farm.catParts 5
+farm.mouthFoxC = mouth farm.catParts 6

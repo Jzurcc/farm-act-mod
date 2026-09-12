@@ -8,26 +8,46 @@ FA_FarmerCat {
     arm2 200
     leftear 52
     rightear 52
-    lefteye @demo.eyeFarmer
-    righteye @demo.eyeFarmer
+    lefteye @farm.eyeFarmer
+    righteye @farm.eyeFarmer
     lefteyebrow 701
     righteyebrow 701
-    mouth @demo.mouthFarmer 
+    mouth @farm.mouthFarmer 
     texture 147
-    palette 25
+    palette 10
+    class_anis Butcher
+}
+
+FA_FarmerCat_Champion {
+    body 34
+    head @farm.headFarmerC
+    tail 163
+    leg1 183
+    leg2 183
+    arm1 200
+    arm2 200
+    leftear 52
+    rightear 52
+    lefteye @farm.eyeFarmer
+    righteye @farm.eyeFarmer
+    lefteyebrow 701
+    righteyebrow 701
+    mouth @farm.mouthFarmerC 
+    texture 147
+    palette 10
     class_anis Butcher
 }
 
 FA_Shepherd {
-    body 74
+    body 98 //@farm.bodyShepherd
     tail 126
     leg1 186
     leg2 186
     arm1 186
     arm2 186
-    texture 18
+    texture @farm.textureShepherd
     palette 65
-    head 1036
+    head @farm.headShepherd
     lefteye 1028
     righteye 1028
     lefteyebrow 1022
@@ -62,6 +82,44 @@ FA_Cow {
 
 FA_Fox {
     palette 42
+    texture 1
+    head @farm.headFox
+    lefteye @farm.eyeFox
+    righteye @farm.eyeFox
+    leftear @farm.earFox
+    rightear @farm.earFox
+    mouth @farm.mouthFox
+    lefteyebrow @farm.lefteyebrowFox
+    righteyebrow @farm.righteyebrowFox
+    body 98
+    leg1 @farm.legFox
+    leg2 @farm.legFox
+    arm1 @farm.armFox
+    arm2 @farm.armFox
+    tail @farm.tailFox
+    voice male1
+    pitch 1.2
+}
+
+FA_Fox_Champion {
+    palette 42
+    texture 1
+    head @farm.headFoxC
+    lefteye @farm.eyeFoxC
+    righteye @farm.eyeFox
+    leftear @farm.earFox
+    rightear @farm.earFox
+    mouth @farm.mouthFoxC
+    lefteyebrow @farm.lefteyebrowFox
+    righteyebrow @farm.righteyebrowFox
+    body 98
+    leg1 @farm.legFox
+    leg2 @farm.legFox
+    arm1 @farm.armFox
+    arm2 @farm.armFox
+    tail @farm.tailFox
+    voice male1
+    pitch 1.2
 }
 
 FA_Bull {
@@ -88,40 +146,40 @@ FA_Bull {
 FA_Goat {
     texture 14
     palette 27
-    head @demo.headGoat
-    lefteye @demo.eyeGoat
-    righteye @demo.eyeGoat
-    leftear @demo.earGoat
-    rightear @demo.earGoat
-    mouth @demo.mouthGoat
+    head @farm.headGoat
+    lefteye @farm.eyeGoat
+    righteye @farm.eyeGoat
+    leftear @farm.earGoat
+    rightear @farm.earGoat
+    mouth @farm.mouthGoat
     lefteyebrow 42
     righteyebrow 42
-    body @demo.bodyGoat
-    leg1 @demo.legGoat
-    leg2 @demo.legGoat
-    arm1 @demo.legGoat
-    arm2 @demo.legGoat
-    tail @demo.tailGoat
+    body @farm.bodyGoat
+    leg1 @farm.legGoat
+    leg2 @farm.legGoat
+    arm1 @farm.legGoat
+    arm2 @farm.legGoat
+    tail @farm.tailGoat
     voice male1
     pitch 1.2
 }
 
 FA_Goat_Champion {
     palette 40
-    head @demo.headGoatC
-    lefteye @demo.eyeGoatC
-    righteye @demo.eyeGoatC
-    leftear @demo.earGoatC
-    rightear @demo.earGoatC
-    mouth @demo.mouthGoatC
+    head @farm.headGoatC
+    lefteye @farm.eyeGoatC
+    righteye @farm.eyeGoatC
+    leftear @farm.earGoatC
+    rightear @farm.earGoatC
+    mouth @farm.mouthGoatC
     lefteyebrow 42
     righteyebrow 42
-    body @demo.bodyGoat
-    leg1 @demo.legGoat
-    leg2 @demo.legGoat
-    arm1 @demo.legGoat
-    arm2 @demo.legGoat
-    tail @demo.tailGoatC
+    body @farm.bodyGoat
+    leg1 @farm.legGoat
+    leg2 @farm.legGoat
+    arm1 @farm.legGoat
+    arm2 @farm.legGoat
+    tail @farm.tailGoatC
     voice male1
     pitch 1.2
     texture 14
