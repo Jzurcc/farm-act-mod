@@ -1,3 +1,9 @@
+// Items
+farm.headGear = headItem farm.items 1
+farm.headGear2 = headItem farm.items 2
+farm.weaponWeapon = weapon farm.items 1
+
+// Goat
 farm.headGoat = head farm.catParts 1
 farm.eyeGoat = eye farm.catParts 1
 farm.earGoat = ear farm.catParts 1 
@@ -6,28 +12,27 @@ farm.bodyGoat = body farm.catParts 1
 farm.legGoat = leg farm.catParts 1
 farm.tailGoat = tail farm.catParts 1
 
+// Champion Goat
 farm.headGoatC = head farm.catParts 2
 farm.eyeGoatC = eye farm.catParts 2
 farm.earGoatC = ear farm.catParts 2
 farm.tailGoatC = tail farm.catParts 2
 farm.mouthGoatC = mouth farm.catParts 2
 
+// Shepherd
 farm.textureShepherd = texture farm.catParts 2
 farm.bodyShepherd = body farm.catParts 2
 farm.headShepherd = head farm.catParts 6
 
+// Farmer
 farm.eyeFarmer = eye farm.catParts 3
 farm.mouthFarmer = mouth farm.catParts 3
 
+// Champion Farmer
 farm.headFarmerC = head farm.catParts 3
 farm.mouthFarmerC = mouth farm.catParts 4
 
-farm.headGear = headItem farm.items 1
-
-farm.headGear2 = headItem farm.items 2
-
-farm.weaponWeapon = weapon farm.items 1
-
+// Fox
 farm.headFox = head farm.catParts 4
 farm.eyeFox = eye farm.catParts 4
 farm.lefteyebrowFox = eyebrow farm.catParts 2
@@ -38,6 +43,7 @@ farm.legFox = leg farm.catParts 3
 farm.armFox = leg farm.catParts 2
 farm.tailFox = tail farm.catParts 3
 
+// Champion Fox
 farm.eyeFoxC = eye farm.catParts 5
 farm.headFoxC = head farm.catParts 5
 farm.mouthFoxC = mouth farm.catParts 6
