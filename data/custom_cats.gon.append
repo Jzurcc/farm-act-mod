@@ -8,8 +8,8 @@ FA_FarmerCat {
     arm2 200
     leftear 52
     rightear 52
-    lefteye @farm.eyeFarmer
-    righteye @farm.eyeFarmer
+    lefteye 74
+    righteye 74
     lefteyebrow 701
     righteyebrow 701
     mouth @farm.mouthFarmer 
@@ -28,8 +28,8 @@ FA_FarmerCat_Champion {
     arm2 200
     leftear 52
     rightear 52
-    lefteye @farm.eyeFarmer
-    righteye @farm.eyeFarmer
+    lefteye @farm.eyeFarmerC
+    righteye @farm.eyeFarmerC
     lefteyebrow 701
     righteyebrow 701
     mouth @farm.mouthFarmerC 

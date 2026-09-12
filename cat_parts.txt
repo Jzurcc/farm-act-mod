@@ -25,10 +25,10 @@ farm.bodyShepherd = body farm.catParts 2
 farm.headShepherd = head farm.catParts 6
 
 // Farmer
-farm.eyeFarmer = eye farm.catParts 3
 farm.mouthFarmer = mouth farm.catParts 3
 
 // Champion Farmer
+farm.eyeFarmerC = eye farm.catParts 3
 farm.headFarmerC = head farm.catParts 3
 farm.mouthFarmerC = mouth farm.catParts 4
 
